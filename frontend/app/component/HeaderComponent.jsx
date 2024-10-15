@@ -39,11 +39,13 @@ function HeaderComponent() {
                 {isOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
               </button>
             </div>
+            <Link href="/">
             <img
               src="/compLogo.png"
               alt="Company logo: Your Brand Name"
               className="h-16 lg:h-20"
             />
+            </Link>
           </div>
           <div className="hidden lg:block w-2/6 mt-4 lg:mt-0  lg:items-center bg-gray-100 ">
             <form className="flex w-full" role="search" aria-label="Search products">

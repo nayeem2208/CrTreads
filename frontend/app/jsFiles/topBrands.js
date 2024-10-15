@@ -1,7 +1,7 @@
 const tyreBrands = [
     {
       name: "MRF",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mrf-logo.png" // Replace with actual image URL
+      imageUrl: "https://i.pinimg.com/736x/62/77/44/62774490c4ba2264f20537ba8f9a4e57.jpg" // Replace with actual image URL
     },
     {
       name: "Apollo",
