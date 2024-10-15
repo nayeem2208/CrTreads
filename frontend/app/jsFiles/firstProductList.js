@@ -5,7 +5,7 @@ let firstProductList = [
     },
     {
       name: "Conventional (Hot) Rubber",
-      imageUrl: "https://midas.ind.in//public/uploads/products/1674295475.jpg"
+      imageUrl: "https://cpimg.tistatic.com/07815989/b/5/Conventional-Rubber.jpg"
     },
     {
       name: "Bonding Gum",
@@ -13,7 +13,7 @@ let firstProductList = [
     },
     {
       name: "Curing Bag",
-      imageUrl: "https://midas.ind.in//public/uploads/products/1538126562.jpg"
+      imageUrl: "https://5.imimg.com/data5/CJ/MH/MY-1718646/curing-bag-500x500.jpg"
     },
     {
       name: "Envelope",
@@ -21,7 +21,7 @@ let firstProductList = [
     },
     {
       name: "Tyre Flap",
-      imageUrl: "https://midas.ind.in//public/uploads/products/1538126946.jpg"
+      imageUrl: "https://cpimg.tistatic.com/05384010/b/4/Tyre-Flap.jpg"
     },
     {
       name: "Orbi Tread",

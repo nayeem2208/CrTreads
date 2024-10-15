@@ -11,7 +11,7 @@ function ProductsSidebar({ onProductSelect, selected, isVisible, toggleVisibilit
           <li
             key={index}
             className={`p-2 rounded cursor-pointer transition duration-200 
-              ${selected.name === product.name ? 'text-amber-400 hover:bg-amber-400 hover:text-white' : 'hover:bg-amber-200'}`}
+              ${selected.name === product.name ? 'text-red-400 hover:bg-red-400 hover:text-white' : 'hover:bg-red-200'}`}
             onClick={() => {
               onProductSelect(product); 
               toggleVisibility(); // Hide the sidebar when a product is selected

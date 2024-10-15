@@ -17,18 +17,27 @@ function SecondHeader() {
     >
       <div className="w-full lg:w-5/6 py-4 md:py-2">
         {/* First Row - First 6 Products */}
-        <div className="flex justify-start space-x-16 md:space-x-4 overflow-x-auto">
-          <div className="pr-0 md:pr-4 "></div> {/* Padding for better visibility */}
+        <div className="flex justify-start space-x-16 md:space-x-4 overflow-x-auto md:py-6">
+          <div className="pr-0 md:pr-4 "></div>{" "}
+          {/* Padding for better visibility */}
           {firstSlice.map((product, index) => (
-            <article className="text-center flex flex-col flex-shrink-0  justify-center items-center" key={index} style={{ width: "calc(16.66% - 1rem)" }}>
-            <figure className="bg-gray-500 rounded-full w-16 md:w-28 h-16 md:h-28 overflow-hidden">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+            <article
+            className="text-center flex flex-col flex-shrink-0 justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
+            key={index}
+            style={{ width: "calc(16.66% - 1rem)" }}
+          >
+            <figure className="bg-gray-300 hover:bg-red-300 rounded-full w-20 md:w-28 h-20 md:h-28 overflow-hidden p-2 flex items-center transition-transform duration-300 ease-in-out transform ">
+              <div className="bg-gray-200 hover:bg-red-200 rounded-full overflow-hidden p-2 flex items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+                <div className="rounded-full overflow-hidden">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  />
+                </div>
+              </div>
             </figure>
-            <figcaption className="mt-3 text-sm md:text-base text-center">
+            <figcaption className="mt-3 text-sm font-medium text-center transition-colors duration-300 ease-in-out hover:text-red-400">
               {product.name}
             </figcaption>
           </article>
@@ -38,21 +47,30 @@ function SecondHeader() {
 
       {/* Second Row - Remaining Products */}
       <div className="w-full lg:w-5/6 py-4 md:py-2  md:mt-8">
-        <div className="flex justify-start space-x-16 md:space-x-4 overflow-x-auto">
-          <div className="pr-0 md:pr-4"></div> {/* Padding for better visibility */}
+        <div className="flex justify-start space-x-16 md:space-x-4 overflow-x-auto md:py-6">
+          <div className="pr-0 md:pr-4"></div>{" "}
+          {/* Padding for better visibility */}
           {slicedProducts.map((product, index) => (
-            <article className="text-center flex flex-col flex-shrink-0  justify-center items-center" key={index} style={{ width: "calc(16.66% - 1rem)" }}>
-              <figure className="bg-gray-500 rounded-full w-16 md:w-28 h-16 md:h-28 overflow-hidden">
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-              </figure>
-              <figcaption className="mt-3 text-sm md:text-base text-center">
-                {product.name}
-              </figcaption>
-            </article>
+            <article
+            className="text-center flex flex-col flex-shrink-0 justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
+            key={index}
+            style={{ width: "calc(16.66% - 1rem)" }}
+          >
+            <figure className="bg-gray-300 hover:bg-red-300 rounded-full  w-20 md:w-28 h-20 md:h-28 overflow-hidden p-2 flex items-center transition-transform duration-300 ease-in-out transform ">
+              <div className="bg-gray-200 hover:bg-red-200 rounded-full overflow-hidden p-2 flex items-center transition-transform duration-300 ease-in-out transform hover:scale-105">
+                <div className="rounded-full overflow-hidden">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  />
+                </div>
+              </div>
+            </figure>
+            <figcaption className="mt-3 text-sm font-medium text-center transition-colors duration-300 ease-in-out hover:text-red-400">
+              {product.name}
+            </figcaption>
+          </article>
           ))}
         </div>
       </div>

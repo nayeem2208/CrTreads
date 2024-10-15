@@ -33,7 +33,7 @@ function AllProducts() {
       <div className="lg:hidden mb-4 text-center">
         <button
           onClick={toggleSidebarVisibility}
-          className="p-2 bg-amber-500 text-white rounded-lg shadow-md hover:bg-amber-600 transition duration-300"
+          className="p-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition duration-300"
         >
           {isSidebarVisible ? "Hide Categories" : "Show Categories"}
         </button>
