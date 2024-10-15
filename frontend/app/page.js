@@ -9,6 +9,7 @@ import TrendingProducts from './component/Home/TrendingProducts';
 import OfferComponent from './component/Home/OfferComponent';
 import NewArrivals from './component/Home/NewArrivals';
 import Testimonial from './component/Home/Testimonial';
+import AllProductsHome from './component/Home/AllProducts';
 
 export default function Home() {
   return (
@@ -18,9 +19,8 @@ export default function Home() {
       <CarouselComponent />
       <ShopFromTopBrands />
       <BestSellers />
-      {/* <TrendingProducts/> */}
+      <AllProductsHome/>
       <OfferComponent/>
-      {/* <NewArrivals/> */}
       <Testimonial/>
     </div>
   );

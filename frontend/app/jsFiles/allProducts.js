@@ -2,6 +2,7 @@ let AllProductsCategory = [
   {
     name: "Precured Tread Rubber",
     description: "High-quality tread rubber for cold retreading process. Suitable for a variety of tire types.",
+    imageUrl: "https://5.imimg.com/data5/OX/KT/TR/SELLER-5475264/precured-tread-rubber-500x500-1000x1000.jpg",
     products: [
       {
         name: "ADH",
@@ -48,24 +49,25 @@ let AllProductsCategory = [
   {
     name: "Conventional (Hot) Rubber",
     description: "Hot rubber used in the traditional tire retreading process, offering durability and flexibility.",
-    imageUrl: "https://midas.ind.in//public/uploads/products/1674295475.jpg",
+    imageUrl: "https://cpimg.tistatic.com/07815989/b/5/Conventional-Rubber.jpg",
     link: "/products/conventional-hot-rubber"
   },
   {
     name: "Bonding Gum",
     description: "Our Gum is made from 100% natural rubber to increase tack. Available in customer specified sizes also. Different types of Gum are available for both precured and hot processes. Can be used to fill nail holes and repair injured parts of casing.",
-    imageUrl: "https://midas.ind.in//public/uploads/products/1538126412.jpg",
+    imageUrl: "https://5.imimg.com/data5/SELLER/Default/2020/11/UL/QU/JH/24683302/bonding-gum.jpg",
     link: "/products/bonding-gum"
   },
   {
     name: "Curing Bag",
     description: "Durable curing bags that are essential in the retreading process for even pressure distribution.",
-    imageUrl: "https://midas.ind.in//public/uploads/products/1538126562.jpg",
+    imageUrl: "https://5.imimg.com/data5/CJ/MH/MY-1718646/curing-bag-500x500.jpg",
     link: "/products/curing-bag"
   },
   {
     name: "Envelope",
     description: "Quality envelopes designed to provide a protective seal during the tire curing process.",
+    imageUrl: "https://midas.ind.in//public/uploads/products/1588262546.jpg",
     products: [
       {
         name: "ARC/SNAP SEAL/FLEX SEAL SYSTEM- OUTER ENVELOPE",
@@ -97,7 +99,7 @@ let AllProductsCategory = [
   {
     name: "Tyre Flap",
     description: "Tyre flaps for additional protection of tube and tire during tire installation and retreading.",
-    imageUrl: "https://midas.ind.in//public/uploads/products/1538126946.jpg",
+    imageUrl: "https://cpimg.tistatic.com/05384010/b/4/Tyre-Flap.jpg",
     link: "/products/tyre-flap"
   },
   {

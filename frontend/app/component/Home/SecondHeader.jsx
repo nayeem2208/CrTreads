@@ -17,12 +17,12 @@ function SecondHeader() {
     >
       <div className="w-full lg:w-5/6 py-4 md:py-2">
         {/* First Row - First 6 Products */}
-        <div className="flex justify-start space-x-16 md:space-x-4 overflow-x-auto md:py-6 ">
+        <div className="flex justify-start space-x-16 md:space-x-0 overflow-x-auto md:py-6 ">
           <div className="pr-0 md:pr-4 "></div>{" "}
           {/* Padding for better visibility */}
           {firstProductList.map((product, index) => (
             <article
-            className="text-center flex flex-col flex-shrink-0 justify-start  items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
+            className="text-center flex flex-col flex-shrink-0 justify-start  items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400 "
             key={index}
             style={{ width: "calc(16.66% - 1rem)" }}
           >

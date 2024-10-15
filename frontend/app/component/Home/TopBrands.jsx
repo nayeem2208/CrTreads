@@ -10,7 +10,7 @@ function ShopFromTopBrands() {
       <div className="overflow-x-auto lg:w-9/12 w-11/12">
         {/* Section heading */}
         <h2 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">
-          Top Brands
+          TOP BRANDS
         </h2>
 
         {/* Brand logos */}
