@@ -1,21 +1,28 @@
 "use client";
 
+import { useRouter,usePathname   } from "next/navigation";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Hamburger Icon
 import { IoClose } from "react-icons/io5"; // Close Icon
-import { RiHome4Line } from "react-icons/ri";
+import { GoHome } from "react-icons/go";
+import { AiOutlineProduct } from "react-icons/ai";
 import { VscArchive } from "react-icons/vsc";
 import { MdOutlineReviews } from "react-icons/md";
+import { CiUser } from "react-icons/ci";
 import { IoIosContact } from "react-icons/io";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence for exit animations
 
 function HeaderComponent() {
+  // const router = useRouter();
+  const pathName=usePathname()
   const [isOpen, setIsOpen] = useState(false);
-  const [isHold, setIsHold] = useState(false); // Manage the state for mobile menu
+  const [isHold, setIsHold] = useState(false);
+
+  console.log(pathName, "routerrrr");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -96,7 +103,7 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start text-gray-700 hover:text-red-500"
                 >
-                  <RiHome4Line className="h-5 w-5 mr-1" /> Home
+                  <GoHome className="h-5 w-5 mr-1" /> Home
                 </Link>
               </li>
 
@@ -107,7 +114,7 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start text-gray-700 hover:text-red-500"
                 >
-                  <VscArchive className="h-5 w-5 mr-1" /> Products
+                  <AiOutlineProduct className="h-5 w-5 mr-1" /> Products
                 </Link>
               </li>
 
@@ -129,7 +136,7 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start text-gray-700 hover:text-red-500"
                 >
-                  <IoIosContact className="h-5 w-5 mr-1" /> Contact us
+                  <CiUser className="h-5 w-5 mr-1" /> Contact us
                 </Link>
               </li>
             </ul>
@@ -164,7 +171,7 @@ function HeaderComponent() {
                   className="p-4 flex flex-col justify-between h-full pb-16 text-xl font-semibold "
                   style={{ fontFamily: "Mukta, sans-serif" }}
                 >
-                  <ul className="flex flex-col space-y-6 text-gray-300 flex-grow justify-center items-end">
+                  <ul className="flex flex-col space-y-6 text-gray-400 flex-grow justify-center items-end">
                     <motion.li
                       initial={{ x: -900, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
@@ -174,7 +181,8 @@ function HeaderComponent() {
                       <Link
                         href="/"
                         onClick={closeMenu}
-                        className="flex items-center hover:text-red-500"
+                        className={`flex items-center hover:text-red-500 ${pathName=='/'?'text-white font-bold':''}
+                      `}
                       >
                         HOME
                       </Link>
@@ -188,7 +196,7 @@ function HeaderComponent() {
                       <Link
                         href="/products"
                         onClick={closeMenu}
-                        className="flex items-center hover:text-red-500"
+                        className={`flex items-center hover:text-red-500 ${pathName=='/products'?'text-white font-bold':''}`}
                       >
                         PRODUCTS
                       </Link>
@@ -202,7 +210,7 @@ function HeaderComponent() {
                       <Link
                         href="/testimonials"
                         onClick={closeMenu}
-                        className="flex items-center hover:text-red-500"
+                        className={`flex items-center hover:text-red-500 ${pathName=='/testimonials'?'text-white font-bold':''}`}
                       >
                         TESTIMONIALS
                       </Link>
@@ -216,7 +224,7 @@ function HeaderComponent() {
                       <Link
                         href="/contact"
                         onClick={closeMenu}
-                        className="flex items-center hover:text-red-500"
+                        className={`flex items-center hover:text-red-500 ${pathName=='/contact'?'text-white font-bold':''}`}
                       >
                         CONTACT US
                       </Link>
