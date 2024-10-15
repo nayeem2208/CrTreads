@@ -12,7 +12,7 @@ function BestSellers() {
 
   return (
     <div
-      className="pt-8 flex justify-center items-center bg-gray-100"
+      className="pt-8 flex justify-center items-center "
       style={{ height: "50vh" }}
     >
       <div className="w-11/12 lg:w-9/12">
@@ -23,7 +23,7 @@ function BestSellers() {
           {bestSeller.map((product, index) => (
             <div
               key={index}
-              className="w-44 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer  shadow-xl bg-white overflow-hidden"
+              className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer  shadow-xl  overflow-hidden rounded-lg "
               onClick={() => handleCardClick(product.name)} // Pass product name to the click handler
             >
               <div className="rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 ">
@@ -40,7 +40,7 @@ function BestSellers() {
               </button> */}
               <button
                 type="submit"
-                class="text-white flex justify-center gap-3 w-full items-center mx-auto  text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-red-400 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2  group"
+                class="text-white flex justify-center gap-3 w-full items-center mx-auto  text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden   group"
               >
                 Enquire
                 <svg
@@ -50,7 +50,7 @@ function BestSellers() {
                 >
                   <path
                     d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                    class="fill-white group-hover:fill-red-400"
+                    class="fill-white group-hover:fill-gray-600"
                   ></path>
                 </svg>
               </button>

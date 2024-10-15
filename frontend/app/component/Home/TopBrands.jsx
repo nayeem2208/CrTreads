@@ -5,7 +5,7 @@ function ShopFromTopBrands() {
   return (
     <section
       aria-label="Shop from Top Brands"
-      className="lg:p-4 flex justify-center bg-stone-100 h-72 md:h-96 items-center shadow-inner"
+      className="lg:p-4 flex justify-center bg-stone-100 h-64 md:h-96 items-center shadow-inner"
     >
       <div className="overflow-x-auto lg:w-9/12 w-11/12">
         {/* Section heading */}

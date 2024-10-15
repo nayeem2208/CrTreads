@@ -7,7 +7,7 @@ const BannerSlider = () => {
   return (
     <section
       aria-label="Banner" // Optional: Set a max height for the section
-      className="relative   shadow-md w-full h-[700px]"
+      className="relative   shadow-md w-full h-[400px] md:h-[700px]"
     >
       <article className="h-full w-full">
         <figure className="h-full w-full overflow-hidden"> {/* Ensure the figure takes full height */}
