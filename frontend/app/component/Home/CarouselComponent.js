@@ -9,21 +9,23 @@ const BannerSlider = () => {
       aria-label="Banner" // Optional: Set a max height for the section
       className="relative   shadow-md w-full h-[400px] md:h-[700px]"
     >
-      <article className="h-full w-full">
-        <figure className="h-full w-full overflow-hidden"> {/* Ensure the figure takes full height */}
+      <article className="h-full w-full relative">
+        <figure className="h-full w-full overflow-hidden">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
           <video
-            src="/videoCarousel.mp4"
-            // controls
+            src="/Amazing Process of Making Retreaded Tire With Old Tires. Tire Recycling Factory in Korea (online-video-cutter.com)(2).mp4"
             autoPlay
             loop
             muted
-            className="w-full h-full object-cover" // Make sure the video covers the entire section
+            className="w-full h-full object-cover filter contrast-125 brightness-110"
             loading="lazy"
           >
             Your browser does not support the video tag.
           </video>
         </figure>
       </article>
+
     </section>
   );
 };
