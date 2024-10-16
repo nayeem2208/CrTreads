@@ -5,16 +5,18 @@ import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Hamburger Icon
 import { IoClose } from "react-icons/io5"; // Close Icon
-import { RiHome4Line } from "react-icons/ri";
-import { VscArchive } from "react-icons/vsc";
-import { MdOutlineReviews } from "react-icons/md";
-import { IoIosContact } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { LiaProductHunt } from "react-icons/lia";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { RiHome5Line } from "react-icons/ri";
+import { usePathname } from 'next/navigation'
 
 function HeaderComponent() {
   const [isOpen, setIsOpen] = useState(false); // Manage the state for mobile menu
+  const pathname = usePathname()
+  console.log(pathname,'pathname')
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -72,15 +74,15 @@ function HeaderComponent() {
               isOpen ? "block" : "hidden"
             } lg:flex lg:w-2/5 mt-4 lg:mt-0 lg:items-center`}
           >
-            <ul className="flex flex-col lg:flex-row justify-center font-medium space-y-4 lg:space-y-0 lg:space-x-6">
+            <ul className="flex flex-col lg:flex-row justify-center items-center font-medium space-y-4 lg:space-y-0 lg:space-x-6">
               {/* Home */}
               <li className="text-center lg:text-left">
                 <Link
                   href="/"
                   onClick={closeMenu}
-                  className="flex items-center justify-center lg:justify-start text-gray-900 hover:text-red-500"
+                  className={`flex tex items-center justify-center lg:justify-start  hover:text-red-500`}
                 >
-                  <RiHome4Line className="h-5 w-5 mr-1" /> Home
+                  <RiHome5Line className="h-6 w-6 mr-1" /> Home
                 </Link>
               </li>
 
@@ -89,9 +91,9 @@ function HeaderComponent() {
                 <Link
                   href="/products"
                   onClick={closeMenu}
-                  className="flex items-center justify-center lg:justify-start text-gray-900 hover:text-red-500"
+                  className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <VscArchive className="h-5 w-5 mr-1" /> Products
+                  <LiaProductHunt  className="h-6 w-6 mr-1" /> Products
                 </Link>
               </li>
 
@@ -100,9 +102,9 @@ function HeaderComponent() {
                 <Link
                   href="/testimonials"
                   onClick={closeMenu}
-                  className="flex items-center justify-center lg:justify-start text-gray-900 hover:text-red-500"
+                  className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <MdOutlineReviews className="h-5 w-5 mr-1" /> Testimonials
+                  <IoNewspaperOutline className="h-6 w-6 mr-1" /> Testimonials
                 </Link>
               </li>
 
@@ -111,9 +113,9 @@ function HeaderComponent() {
                 <Link
                   href="/contact"
                   onClick={closeMenu}
-                  className="flex items-center justify-center lg:justify-start text-gray-900 hover:text-red-500"
+                  className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <FaRegUser className="h-4 w-5 mr-1" /> Contact us
+                  <FaRegUser className="h-5 w-6 mr-1" /> Contact us
                 </Link>
               </li>
             </ul>
@@ -195,24 +197,25 @@ function HeaderComponent() {
 
         {/* Row 2: Search Box */}
         <div className="block lg:hidden w-full mt-4 lg:mt-0 lg:items-center">
-          <form className="flex w-full" role="search" aria-label="Search products">
+          <form
+            className="flex w-full"
+            role="search"
+            aria-label="Search products"
+          >
             <label htmlFor="search-input" className="sr-only">
               Search for products, brands, and more
             </label>
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search for products, brands, and more"
-              className="w-full p-2 rounded-l-md focus:outline-none bg-neutral-100 focus:border-red-400"
-              aria-label="Search input"
-            />
-            <button
-              type="submit"
-              className="p-2 bg-red-500 text-white rounded-r-md hover:bg-red-600"
-              aria-label="Submit search"
-            >
-              <CiSearch className="w-6 h-6" />
-            </button>
+            <div className="relative w-full">
+              <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
+              {/* Search icon */}
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search for products, brands, and more"
+                className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
+                aria-label="Search input"
+              />
+            </div>
           </form>
         </div>
       </div>

@@ -5,11 +5,44 @@ import AllProductsCategory from "../jsFiles/allProducts";
 import { useRouter } from "next/navigation";
 import ReactImageMagnify from "@blacklab/react-image-magnify";
 
+function getQueryParams(url) {
+  const params = new URLSearchParams(url);
+  const data = {};
+  for (let param of params) {
+    data[param[0]] = param[1];
+  }
+  return { data };
+}
+
 function AllProducts() {
   const [selectedProduct, setSelectedProduct] = useState(AllProductsCategory[0]);
   const router = useRouter();
 
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
+  useEffect(() => {
+    const { data } = getQueryParams(window.location.search);
+    let selectedName;
+    try {
+      selectedName = JSON.parse(data.data);
+    } catch (e) {
+      selectedName = data.data;  // In case it's just a regular string
+    }
+    const matchedProduct = AllProductsCategory.find(
+      (product) =>
+        product.name == selectedName
+    );
+
+    // If a match is found, set it as the selected product
+    if (matchedProduct) {
+      setSelectedProduct(matchedProduct);
+    }
+    else {
+      console.log('coundnt find')
+    }
+
+    // console.log(data.data,'data is here')
+  }, []);
 
   const handleCardClick = (selectedProductName, subProductName) => {
     router.push(
@@ -48,14 +81,21 @@ function AllProducts() {
       />
 
       {/* Main Content */}
-      <div className="flex-1 p-4 flex flex-col items-center">
-        <h1 className="text-2xl font-semibold mb-6 text-center">All Products</h1>
+      <div className="flex-1 p-4 flex flex-col items-center bg-neutral-100">
+        <div className="w-5/6 h-48 overflow-hidden hidden lg:block">
+          <img
+            src="https://midas.ind.in/resources/assets/frontent/images/innerbanner.jpg"
+            alt=""
+            className="coverPicInProduct w-full h-auto " // Ensure the image fills the container
+          />
+        </div>
+        {/* <h1 className="text-2xl font-semibold mb-6 text-center">All Products</h1> */}
 
         <div className="w-full flex flex-col items-center">
-          <h2 className="text-3xl mb-6 text-center">{selectedProduct.name}</h2>
+          <h2 className="text-3xl mb-6 text-center my-8">{selectedProduct.name}</h2>
 
           {selectedProduct.products ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center ">
               {selectedProduct.products.map((subProduct, index) => (
                 <div
                   key={index}
@@ -71,7 +111,7 @@ function AllProducts() {
                       className="w-full h-48 object-cover transition duration-300 transform hover:scale-105"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold">{subProduct.name}</h3>
+                  <h3 className="text-lg font-semibold text-center">{subProduct.name}</h3>
                 </div>
               ))}
             </div>
@@ -79,13 +119,14 @@ function AllProducts() {
             <div className="flex flex-col items-center h-full w-full lg:w-5/6 px-4 py-6 shadow-lg">
               {/* Display Large View of the Product without Sub-Products */}
               <div className="lg:flex rounded w-full">
-                <div className="w-full lg:w-2/6 border p-4 flex justify-center">
+                <div className="w-full lg:w-2/6  p-4 flex justify-center ">
                   <ReactImageMagnify
                     imageProps={{
                       alt: selectedProduct.name,
                       height: 300,
                       src: selectedProduct.imageUrl,
                       width: 300,
+
                     }}
                     magnifiedImageProps={{
                       height: 900,

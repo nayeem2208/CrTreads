@@ -1,27 +1,25 @@
 "use client";
 import AllProductsCategory from "@/app/jsFiles/allProducts";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 
 function AllProductsHome() {
-    const router = useRouter();
-    const handleCardClick = (productName) => {
-      // Navigate to the product view page with the product name
-      router.push(`/products/${encodeURIComponent(productName)}`);
-    };
-    
+
+
     return (
         <div className="pt-8 flex justify-center items-center bg-stone-100">
             <div className="w-11/12 lg:w-9/12">
-                <p className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">ALL PRODUCTS</p>
-                <div className="flex overflow-x-auto space-x-6 md:space-x-10 py-8">
+                <p className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 lg:mt-12">ALL PRODUCTS</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-6 py-8">
                     {AllProductsCategory.map((product, index) => (
+                 <Link href={{ pathname: '/products', query: { data: JSON.stringify(product.name) } }}> 
                         <div
                             key={index}
-                            className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer shadow-xl overflow-hidden rounded-lg"
-                            onClick={() => handleCardClick(product.name)}
+                            className="w-full h-56 md:h-80 flex-none mt-6 flex flex-col cursor-pointer shadow-xl overflow-hidden rounded-lg"
+                        
                         >
-                            <div className="rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105">
+                            <div className="rounded-t-lg overflow-hidden h-4/6  flex-grow transition-transform duration-300 transform hover:scale-105">
                                 <img
                                     src={product.imageUrl}
                                     alt={product.name}
@@ -46,6 +44,7 @@ function AllProductsHome() {
                                 </svg>
                             </button>
                         </div>
+                            </Link>
                     ))}
                 </div>
             </div>

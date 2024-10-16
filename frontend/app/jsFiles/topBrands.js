@@ -21,7 +21,7 @@ const tyreBrands = [
     },
     {
       name: "Yokohama",
-      imageUrl: "https://yt3.googleusercontent.com/ytc/AIdro_mApAc-jAcL3-rQdX_t_3gqpsuf5WQYV63zL4mNnDVfcgw=s900-c-k-c0x00ffffff-no-rj" // Replace with actual image URL
+      imageUrl: "https://logosandtypes.com/wp-content/uploads/2020/08/yokohama.png" // Replace with actual image URL
     },
     {
       name: "TVS",
