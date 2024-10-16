@@ -56,7 +56,7 @@ function Contact() {
             className="rounded-lg shadow-lg object-cover w-full h-full"
           />
         </div>
-        <div className="lg:w-1/2 flex flex-col items-center mt-14 lg:mt-0">
+        <div className="w-5/6 lg:w-1/2 flex flex-col items-center mt-14 lg:mt-0">
           <h2 className="text-3xl font-semibold mb-4 text-center">Enquiry Form</h2>
           <form className="w-full max-w-lg">
             <div className="mb-4">
@@ -93,11 +93,21 @@ function Contact() {
               ></textarea>
             </div>
             <div className="flex items-center justify-between">
-              <button
+              {/* <button
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
               >
                 Send
+              </button> */}
+              <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-red-500 text-sm rounded mt-4 md:mt-0">
+                <span className="font-bold text-white  relative z-10 group-hover:text-red-500 duration-500">
+                  Send
+                </span>
+                <span className="absolute top-0 left-0 w-full bg-red-500 duration-500 group-hover:-translate-x-full h-full"></span>
+                <span className="absolute top-0 left-0 w-full bg-red-500 duration-500 group-hover:translate-x-full h-full"></span>
+
+                <span className="absolute top-0 left-0 w-full bg-red-500 duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
+                <span className="absolute delay-300 top-0 left-0 w-full bg-red-500 duration-500 group-hover:translate-y-full h-full"></span>
               </button>
             </div>
           </form>
