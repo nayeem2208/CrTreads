@@ -117,7 +117,7 @@ function TestimonialPage() {
                   </svg>
                 ))}
             </div>
-            <p className="text-gray-600 text-center">"{review.text}"</p>
+            <p className="text-gray-600 text-center">&quot;{review.text}&quot;</p>
             <span className="text-gray-500 text-sm">
               {review.relative_time_description}
             </span>

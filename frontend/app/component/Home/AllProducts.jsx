@@ -13,9 +13,9 @@ function AllProductsHome() {
                 <p className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 lg:mt-12">ALL PRODUCTS</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-6 py-8">
                     {AllProductsCategory.map((product, index) => (
-                 <Link href={{ pathname: '/products', query: { data: JSON.stringify(product.name) } }}> 
+                 <Link key={index} href={{ pathname: '/products', query: { data: JSON.stringify(product.name) } }}> 
                         <div
-                            key={index}
+                            
                             className="w-full h-56 md:h-80 flex-none mt-6 flex flex-col cursor-pointer shadow-xl overflow-hidden rounded-lg"
                         
                         >
