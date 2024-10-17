@@ -15,17 +15,16 @@ function SecondHeader() {
         {/* First Row - First 6 Products */}
         <div className="flex justify-start space-x-10 md:space-x-12 overflow-x-auto md:py-6">
           <article
-            className="text-center flex flex-col flex-shrink-0 justify-start items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
+            className="text-center bg-red-500  flex flex-col flex-shrink-0 justify-start items-start w-20 md:w-44 h-20 md:h-44 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
           >
-            <figure className="bg-gray-300 hover:bg-red-300 rounded-full w-20 md:w-28 h-20 md:h-28 flex items-center justify-center transition-transform duration-300 ease-in-out transform">
-              <div className="rounded-full">
+            {/* <figure className="bg-gray-300 hover:bg-red-300 rounded-full w-20 md:w-36 h-20 md:h-36 flex items-center justify-center transition-transform duration-300 ease-in-out transform"> */}
+
                 <img
                   src="https://dms.mydukaan.io/original/webp/media/c74f22ef-eaa2-404b-832c-7d43fc0c8d86.gif"
                   alt="sale image"
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
                 />
-              </div>
-            </figure>
+            {/* </figure> */}
             {/* <figcaption className="mt-3 text-sm text-center transition-colors duration-300 ease-in-out hover:text-red-400">
               Offer Zone
             </figcaption> */}
