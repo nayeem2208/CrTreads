@@ -26,9 +26,9 @@ function SecondHeader() {
                 />
               </div>
             </figure>
-            <figcaption className="mt-3 text-sm text-center transition-colors duration-300 ease-in-out hover:text-red-400">
+            {/* <figcaption className="mt-3 text-sm text-center transition-colors duration-300 ease-in-out hover:text-red-400">
               Offer Zone
-            </figcaption>
+            </figcaption> */}
           </article>
 
           {/* Padding for better visibility */}
