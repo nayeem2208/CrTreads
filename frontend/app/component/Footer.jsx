@@ -17,7 +17,7 @@ function Footer() {
           Footer
         </h2>
         <div className="flex flex-col md:flex-row justify-between">
-          <div className="w-full md:w-4/12 font-semibold text-sm mb-8 md:mb-0">
+          <div className="w-full md:w-4/12 text-gray-600 md:font-semibold text-sm mb-8 md:mb-0">
             <img
               src="/compLogo.png"
               alt="Company logo: Your Brand Name"
@@ -35,20 +35,20 @@ function Footer() {
             </p>
           </div>
           <div className="w-full md:w-3/12 mb-8 md:mb-0">
-            <h3 className="font-semibold text-2xl">LINKS</h3>
-            <ul className="mt-4 font-semibold">
+            <h3 className="text-gray-600 md:font-semibold text-2xl">LINKS</h3>
+            <ul className="mt-4 text-gray-600 md:font-semibold">
               <li className="my-4">Shop For </li>
               <li className="my-4">Shop For </li>
               <li className="my-4">Shop For</li>
             </ul>
           </div>
           <div className="w-full md:w-3/12">
-            <h3 className="font-semibold text-2xl">Contact Us</h3>
-            <ul className="mt-4">
-              <li className="text-lg">Call Us at +91999999999</li>
-              <li className="text-lg">crtreadstyre.com</li>
+            <h3 className="text-gray-600 md:font-semibold md:text-2xl">Contact Us</h3>
+            <ul className="mt-4 text-gray-600 md:font-semibold">
+              <li className="md:text-lg">Call Us at +91999999999</li>
+              <li className="md:text-lg">crtreadstyre.com</li>
             </ul>
-            <div className="flex mt-4 space-x-4">
+            <div className="flex mt-4 space-x-4 text-gray-600 ">
               <a href="https://www.facebook.com" aria-label="Facebook">
                 <FaFacebook className="w-6 h-6" />
               </a>
@@ -76,7 +76,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-center my-16">
+        <p className="text-center my-16 text-gray-600">
           © 2024 CR Treads Tyres
         </p>
       </div>
