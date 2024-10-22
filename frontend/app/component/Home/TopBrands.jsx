@@ -7,7 +7,7 @@ function ShopFromTopBrands() {
 
   useEffect(() => {
     const container = brandContainerRef.current;
-    const scrollSpeed = 0.5; // Adjust the speed as needed
+    const scrollSpeed = 0.7; // Adjust the speed as needed
 
     // Set up keyframes for the scroll animation
     const keyframes = `

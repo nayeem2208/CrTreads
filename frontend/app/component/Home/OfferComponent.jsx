@@ -46,11 +46,21 @@ function OfferComponent() {
 
         {/* Second Row: One Image */}
         <div className="w-full h-4/6 overflow-hidden mt-4 bg-yellow-400">
-          <img
+          {/* <img
             src="https://www.coxmotorparts.co.uk/wp-content/uploads/2022/05/car-tyres.jpg"
             alt=""
             className="w-full h-full object-cover " // Ensure the image fills the container
-          />
+          /> */}
+          <video
+            src="/MICHELIN Retreading Process.mp4"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover filter contrast-125 brightness-110"
+            loading="lazy"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

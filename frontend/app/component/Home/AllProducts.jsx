@@ -8,7 +8,7 @@ function AllProductsHome() {
 
 
     return (
-        <div className="pt-8 flex justify-center items-center bg-stone-100">
+        <div className="py-8 md:py-12 flex justify-center items-center bg-stone-100">
             <div className="w-11/12 lg:w-9/12">
                 <p className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 lg:mt-12">ALL PRODUCTS</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-6 py-8">

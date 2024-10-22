@@ -74,7 +74,7 @@ function HeaderComponent() {
               isOpen ? "block" : "hidden"
             } lg:flex lg:w-2/5 mt-4 lg:mt-0 lg:items-center`}
           >
-            <ul className="flex flex-col lg:flex-row justify-center items-center font-medium space-y-4 lg:space-y-0 lg:space-x-6">
+            <ul className="flex flex-col lg:flex-row justify-center items-center font-medium space-y-4 lg:space-y-0 lg:space-x-10">
               {/* Home */}
               <li className="text-center lg:text-left">
                 <Link
@@ -82,7 +82,8 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className={`flex tex items-center justify-center lg:justify-start  hover:text-red-500`}
                 >
-                  <RiHome5Line className="h-6 w-6 mr-1" /> Home
+                  {/* <RiHome5Line className="h-6 w-6 mr-1" /> */}
+                   Home
                 </Link>
               </li>
 
@@ -93,7 +94,8 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <LiaProductHunt  className="h-6 w-6 mr-1" /> Products
+                  {/* <LiaProductHunt  className="h-6 w-6 mr-1" /> */}
+                   Products
                 </Link>
               </li>
 
@@ -104,7 +106,8 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <IoNewspaperOutline className="h-6 w-6 mr-1" /> Testimonials
+                  {/* <IoNewspaperOutline className="h-6 w-6 mr-1" />  */}
+                  Testimonials
                 </Link>
               </li>
 
@@ -115,7 +118,8 @@ function HeaderComponent() {
                   onClick={closeMenu}
                   className="flex items-center justify-center lg:justify-start  hover:text-red-500"
                 >
-                  <FaRegUser className="h-5 w-6 mr-1" /> Contact us
+                  {/* <FaRegUser className="h-5 w-6 mr-1" />  */}
+                  Contact us
                 </Link>
               </li>
             </ul>
