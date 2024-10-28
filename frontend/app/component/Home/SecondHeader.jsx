@@ -47,7 +47,7 @@ function SecondHeader() {
           <article
             className="text-center md:w-1/6 px-2  flex flex-col flex-shrink-0 justify-start items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
           >
-            <figure className="bg-gray-300 hover:bg-red-300 rounded-full w-20 md:w-28 h-20 md:h-28 flex items-center justify-center transition-transform duration-300 ease-in-out transform">
+            <figure className=" hover:bg-red-300 rounded-full w-20 md:w-28 h-20 md:h-28 flex items-center justify-center transition-transform duration-300 ease-in-out transform p-2">
               <div className="rounded-full">
                 <img
                   src="https://dms.mydukaan.io/original/webp/media/c74f22ef-eaa2-404b-832c-7d43fc0c8d86.gif"

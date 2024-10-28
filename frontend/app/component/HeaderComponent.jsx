@@ -172,7 +172,7 @@ function HeaderComponent() {
                 <input
                   type="text"
                   id="search-input"
-                  placeholder={`Search for ${randomProduct}`}
+                  placeholder={`Search for "${randomProduct}"`}
                   className="w-full p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-red-400"
                   aria-label="Search input"
                   onFocus={handleFocus}
@@ -400,7 +400,7 @@ function HeaderComponent() {
                 <input
                   type="text"
                   id="search-input"
-                  placeholder={`Search for ${randomProduct}`}
+                  placeholder={`Search for "${randomProduct}"`}
                   className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
                   aria-label="Search input"
                   onFocus={handleFocus}
