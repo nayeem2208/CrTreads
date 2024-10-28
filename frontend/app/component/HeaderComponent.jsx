@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Hamburger Icon
 import { IoClose } from "react-icons/io5"; // Close Icon
@@ -14,15 +14,21 @@ import { RiHome5Line } from "react-icons/ri";
 import { usePathname } from "next/navigation";
 import AllProductsCategory from "../jsFiles/allProducts";
 import ProductsDisplay from "./Home/ProductInSearch";
-
-
+import ProductBaseonSearch from "./Home/ProductBaseonSearch";
 
 function HeaderComponent() {
   const [isOpen, setIsOpen] = useState(false); // Manage the state for mobile menu
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const pathname = usePathname();
-  console.log(pathname, "pathname");
+  const [randomProduct, setRandomProduct] = useState("");
+  const [searchContent, setSearchContent] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [noResults, setNoResults] = useState(false);
 
+  const inputRef = useRef(null);
+  const inputRefMobile = useRef(null);
+  const filteredProductRef = useRef([]);
+  // console.log(filteredProducts, "filtered products");
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -56,6 +62,79 @@ function HeaderComponent() {
     };
   }, [isModalOpen]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const allProductNames = AllProductsCategory.flatMap((category) =>
+        category.products
+          ? category.products.map((product) => product.name)
+          : [category.name]
+      );
+      const randomIndex = Math.floor(Math.random() * allProductNames.length);
+      setRandomProduct(allProductNames[randomIndex]);
+    }, 1500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+    setSearchContent(value);
+    if (value.length > 0) {
+      const regex = new RegExp(`^${value}`, "i");
+
+      const allpro = AllProductsCategory.flatMap((category) =>
+        category.products
+          ? category.products.map((product) => ({
+              ...product,
+              categoryName: category.name,
+            }))
+          : category
+      );
+      allpro.push(
+        {
+          name: "Precured Tread Rubber",
+          description:
+            "High-quality tread rubber for cold retreading process. Suitable for a variety of tire types.",
+          imageUrl:
+            "https://5.imimg.com/data5/OX/KT/TR/SELLER-5475264/precured-tread-rubber-500x500-1000x1000.jpg",
+        },
+        {
+          name: "Envelope",
+          description:
+            "Quality envelopes designed to provide a protective seal during the tire curing process.",
+          imageUrl:
+            "https://midas.ind.in//public/uploads/products/1588262546.jpg",
+        }
+      );
+      console.log(allpro, "all pro");
+        const filteredProducts = allpro.filter((product) =>
+          regex.test(product.name)
+        );
+        console.log(filteredProducts, "filtered");
+        filteredProductRef.current = filteredProducts;
+
+      setNoResults(filteredProducts.length === 0);
+    } else {
+      filteredProductRef.current = [];
+    }
+  };
+  useEffect(() => {
+    if (isModalOpen) {
+      if (window.innerWidth < 768 && inputRefMobile.current) {
+        inputRefMobile.current.focus(); // Focus mobile input
+      } else if (inputRef.current) {
+        inputRef.current.focus(); // Focus desktop input
+      }
+    }
+  }, [isModalOpen]);
+
+  const handleLinkClick = (category) => {
+    console.log('Product clicked:', category);
+    setIsModalOpen(true);
+  };
+  
+
+
   return (
     <header className="flex justify-center bg-white  py-4 ">
       <div className="flex flex-col w-full md:w-full lg:w-full xl:w-11/12 2xl:w-4/6 px-4 md:px-3">
@@ -88,12 +167,12 @@ function HeaderComponent() {
                 tabIndex={0}
               >
                 <label htmlFor="search-input" className="sr-only">
-                  Search for products, brands, and more
+                  Search for {randomProduct}
                 </label>
                 <input
                   type="text"
                   id="search-input"
-                  placeholder="Search for products, brands, and more"
+                  placeholder={`Search for ${randomProduct}`}
                   className="w-full p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-red-400"
                   aria-label="Search input"
                   onFocus={handleFocus}
@@ -132,10 +211,13 @@ function HeaderComponent() {
                     <input
                       type="text"
                       id="search-input"
-                      placeholder="Search for products, brands, and more"
+                      ref={inputRef}
+                      // placeholder={`Search for ${randomProduct}`}
                       className="w-full p-2 border  rounded-l-md focus:outline-none focus:border-red-400"
                       aria-label="Search input"
                       onFocus={handleFocus}
+                      value={searchContent}
+                      onChange={handleSearchChange}
                     />
                     <button
                       type="submit"
@@ -154,7 +236,17 @@ function HeaderComponent() {
                   tabIndex={0}
                 >
                   <ul className="mt-2">
-                  <ProductsDisplay/>
+                    {filteredProductRef.current.length > 0 ? (
+                      <ProductBaseonSearch
+                        products={filteredProductRef.current}
+                      /> // Show this if there are filtered products
+                    ) : noResults ? (
+                      <li className="text-center text-gray-500">
+                        No matching products found.
+                      </li>
+                    ) : (
+                      <ProductsDisplay onProductClick={handleLinkClick}/> // Fallback to the old component
+                    )}{" "}
                   </ul>
                 </div>
               </>
@@ -300,7 +392,7 @@ function HeaderComponent() {
               aria-label="Search products"
             >
               <label htmlFor="search-input" className="sr-only">
-                Search for products, brands, and more
+                Search for {randomProduct}
               </label>
               <div className="relative w-full">
                 <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
@@ -308,7 +400,7 @@ function HeaderComponent() {
                 <input
                   type="text"
                   id="search-input"
-                  placeholder="Search for products, brands, and more"
+                  placeholder={`Search for ${randomProduct}`}
                   className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
                   aria-label="Search input"
                   onFocus={handleFocus}
@@ -341,10 +433,13 @@ function HeaderComponent() {
                     <input
                       type="text"
                       id="search-input"
-                      placeholder="Search for products, brands, and more"
+                      // placeholder={`Search for ${randomProduct}`}
+                      ref={inputRefMobile}
                       className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
                       aria-label="Search input"
                       onFocus={handleFocus}
+                      value={searchContent}
+                      onChange={handleSearchChange}
                     />
                   </div>
                 </form>
@@ -360,7 +455,17 @@ function HeaderComponent() {
               >
                 <p className="font-semibold">Recent Searches</p>
                 <ul className="mt-2">
-                <ProductsDisplay/>
+                {filteredProductRef.current.length > 0 ? (
+                      <ProductBaseonSearch
+                        products={filteredProductRef.current}
+                      /> // Show this if there are filtered products
+                    ) : noResults ? (
+                      <li className="text-center text-gray-500">
+                        No matching products found.
+                      </li>
+                    ) : (
+                      <ProductsDisplay onProductClick={handleLinkClick}/> // Fallback to the old component
+                    )}{" "}
                 </ul>
               </div>
             </>

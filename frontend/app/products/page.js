@@ -19,31 +19,30 @@ function AllProducts() {
   const router = useRouter();
 
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-
   useEffect(() => {
     const { data } = getQueryParams(window.location.search);
+    console.log('ivda maaranind ', data);
+    
     let selectedName;
     try {
       selectedName = JSON.parse(data.data);
     } catch (e) {
-      selectedName = data.data;  // In case it's just a regular string
+      selectedName = data.data; // In case it's just a regular string
     }
+
     const matchedProduct = AllProductsCategory.find(
-      (product) =>
-        product.name == selectedName
+      (product) => product.name === selectedName
     );
 
-    // If a match is found, set it as the selected product
     if (matchedProduct) {
       setSelectedProduct(matchedProduct);
+      router.replace('/products', undefined, { shallow: true });
+    } else {
+      console.log('couldn’t find');
     }
-    else {
-      console.log('coundnt find')
-    }
+  }, [router.isReady, router.query]);
 
-    // console.log(data.data,'data is here')
-  }, []);
-
+  console.log(router.isReady, router.query,'router')
   const handleCardClick = (selectedProductName, subProductName) => {
     router.push(
       `/product/${encodeURIComponent(selectedProductName)}/${encodeURIComponent(

@@ -52,7 +52,7 @@ function OfferComponent() {
             className="w-full h-full object-cover " // Ensure the image fills the container
           /> */}
           <video
-            src="/MICHELIN Retreading Process.mp4"
+            src="/SecondVideo.mp4"
             autoPlay
             loop
             muted
