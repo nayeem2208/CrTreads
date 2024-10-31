@@ -19,7 +19,7 @@ function AllProductsHome() {
                             className="w-full h-56 md:h-80 flex-none mt-6 flex flex-col cursor-pointer shadow-xl overflow-hidden rounded-lg"
                         
                         >
-                            <div className="rounded-t-lg overflow-hidden h-4/6  flex-grow transition-transform duration-300 transform hover:scale-105">
+                            <div className="rounded-t-lg overflow-hidden h-4/6  flex-grow transition-transform duration-300 transform hover:scale-105 p-8 bg-white">
                                 <img
                                     src={product.imageUrl}
                                     alt={product.name}

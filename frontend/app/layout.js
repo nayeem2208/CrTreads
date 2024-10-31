@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "next/head";
 import HeaderComponent from "./component/HeaderComponent";
 import Footer from "./component/Footer";
+import MyApp from "./App";
 
 // Import local fonts
 const geistSans = localFont({
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-mukta`}>
         <HeaderComponent />
-        <div>{children}</div>
+        <div><MyApp>{children}</MyApp></div>
         <Footer />
       </body>
     </html>

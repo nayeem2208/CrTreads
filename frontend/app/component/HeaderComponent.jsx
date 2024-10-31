@@ -15,8 +15,11 @@ import { usePathname } from "next/navigation";
 import AllProductsCategory from "../jsFiles/allProducts";
 import ProductsDisplay from "./Home/ProductInSearch";
 import ProductBaseonSearch from "./Home/ProductBaseonSearch";
+import { useSearchContext } from "../context/Context";
 
 function HeaderComponent() {
+  const { searchQuery, setSearchQuery, searchOpen, setSearchOpen } =
+    useSearchContext();
   const [isOpen, setIsOpen] = useState(false); // Manage the state for mobile menu
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [randomProduct, setRandomProduct] = useState("");
@@ -107,11 +110,11 @@ function HeaderComponent() {
         }
       );
       console.log(allpro, "all pro");
-        const filteredProducts = allpro.filter((product) =>
-          regex.test(product.name)
-        );
-        console.log(filteredProducts, "filtered");
-        filteredProductRef.current = filteredProducts;
+      const filteredProducts = allpro.filter((product) =>
+        regex.test(product.name)
+      );
+      console.log(filteredProducts, "filtered");
+      filteredProductRef.current = filteredProducts;
 
       setNoResults(filteredProducts.length === 0);
     } else {
@@ -129,11 +132,9 @@ function HeaderComponent() {
   }, [isModalOpen]);
 
   const handleLinkClick = (category) => {
-    console.log('Product clicked:', category);
-    setIsModalOpen(true);
+    console.log("Product clicked:", category);
+    setIsModalOpen(false);
   };
-  
-
 
   return (
     <header className="flex justify-center bg-white  py-4 ">
@@ -245,7 +246,7 @@ function HeaderComponent() {
                         No matching products found.
                       </li>
                     ) : (
-                      <ProductsDisplay onProductClick={handleLinkClick}/> // Fallback to the old component
+                      <ProductsDisplay onProductClick={handleLinkClick} /> // Fallback to the old component
                     )}{" "}
                   </ul>
                 </div>
@@ -455,17 +456,17 @@ function HeaderComponent() {
               >
                 <p className="font-semibold">Recent Searches</p>
                 <ul className="mt-2">
-                {filteredProductRef.current.length > 0 ? (
-                      <ProductBaseonSearch
-                        products={filteredProductRef.current}
-                      /> // Show this if there are filtered products
-                    ) : noResults ? (
-                      <li className="text-center text-gray-500">
-                        No matching products found.
-                      </li>
-                    ) : (
-                      <ProductsDisplay onProductClick={handleLinkClick}/> // Fallback to the old component
-                    )}{" "}
+                  {filteredProductRef.current.length > 0 ? (
+                    <ProductBaseonSearch
+                      products={filteredProductRef.current}
+                    /> // Show this if there are filtered products
+                  ) : noResults ? (
+                    <li className="text-center text-gray-500">
+                      No matching products found.
+                    </li>
+                  ) : (
+                    <ProductsDisplay onProductClick={handleLinkClick} /> // Fallback to the old component
+                  )}{" "}
                 </ul>
               </div>
             </>

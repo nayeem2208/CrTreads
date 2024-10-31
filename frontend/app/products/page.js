@@ -16,6 +16,7 @@ function getQueryParams(url) {
 
 function AllProducts() {
   const [selectedProduct, setSelectedProduct] = useState(AllProductsCategory[0]);
+  const [lastProductId, setLastProductId] = useState("");
   const router = useRouter();
 
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -36,6 +37,7 @@ function AllProducts() {
 
     if (matchedProduct) {
       setSelectedProduct(matchedProduct);
+      setLastProductId(matchedProduct.name); 
       router.replace('/products', undefined, { shallow: true });
     } else {
       console.log('couldn’t find');
@@ -52,7 +54,10 @@ function AllProducts() {
   };
 
   const handleProductSelection = (product) => {
-    setSelectedProduct(product);
+    if (product.name !== lastProductId) {
+      setSelectedProduct(product);
+      setLastProductId(product.name);
+    }
   };
 
   const toggleSidebarVisibility = () => {

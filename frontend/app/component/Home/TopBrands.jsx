@@ -40,7 +40,7 @@ function ShopFromTopBrands() {
       </div>
       {/* Scrolling brand logos */}
       <div className="overflow-hidden no-scrollbar lg:w-9/12 w-11/12 text-gray-800">
-        <div className="flex space-x-12 lg:space-x-7" ref={brandContainerRef}>
+        <div className="flex space-x-12 lg:space-x-7 " ref={brandContainerRef}>
           {tyreBrands.concat(tyreBrands).map((product, index) => (
             <article className="text-center hover:text-red-400" key={index}>
               <figure className="bg-gray-300 rounded-full w-20 md:w-28 h-20 md:h-28 overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-400 hover:shadow-md hover:shadow-red-200">

@@ -10,6 +10,7 @@ import OfferComponent from './component/Home/OfferComponent';
 import NewArrivals from './component/Home/NewArrivals';
 import Testimonial from './component/Home/Testimonial';
 import AllProductsHome from './component/Home/AllProducts';
+import FlagComponent from './component/Home/FlagComponent';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <AllProductsHome/>
       <OfferComponent/>
       <Testimonial/>
+      <FlagComponent/>
     </div>
   );
 }

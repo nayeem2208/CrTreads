@@ -7,11 +7,17 @@ function OfferComponent() {
   const [randomTwo, setRandomNumberTwo] = useState(0);
   const [randomThree, setRandomNumberThree] = useState(0);
   const [randomFour, setRandomNumberFour] = useState(0);
+  const [opacityOne,setOpacityOne]=useState(1)
+  const [opacityTwo,setOpacityTwo]=useState(1)
+  const [opacityThree,setOpacityThree]=useState(1)
+  const [opacityFour,setOpacityFour]=useState(1)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
+      setOpacityOne(0)
       const random = Math.floor(Math.random() * 4);
       setRandomNumberOne(random);
+      setOpacityOne(1)
     }, 3000);
 
     return () => {
@@ -77,6 +83,7 @@ function OfferComponent() {
                 src={OfferImages[0][randomOne]}
                 alt=""
                 className="h-full w-full object-cover"
+                style={{opacity:opacityOne}}
               />
             </div>
           </div>
