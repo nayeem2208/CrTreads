@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef } from "react";
 import tyreBrands from "@/app/jsFiles/topBrands";
+import patterns from "@/app/jsFiles/topPatterns";
 
 function ShopFromTopBrands() {
   const brandContainerRef = useRef(null);
@@ -29,6 +30,8 @@ function ShopFromTopBrands() {
     };
   }, []);
 
+  const doubledPatterns = [...patterns, ...patterns];
+
   return (
     <section
       aria-label="Shop from Top Brands"
@@ -36,12 +39,12 @@ function ShopFromTopBrands() {
     >
       {/* Section heading */}
       <div className="  lg:w-9/12 w-11/12 mb-4">
-      <h2 className="text-xl md:text-2xl font-semibold mb-6 text-black ">TOP BRANDS</h2>
+      <h2 className="text-xl md:text-2xl font-semibold mb-6 text-black ">TOP PATTERNS</h2>
       </div>
       {/* Scrolling brand logos */}
       <div className="overflow-hidden no-scrollbar lg:w-9/12 w-11/12 text-gray-800">
         <div className="flex space-x-12 lg:space-x-7 " ref={brandContainerRef}>
-          {tyreBrands.concat(tyreBrands).map((product, index) => (
+          {/* {tyreBrands.concat(tyreBrands).map((product, index) => (
             <article className="text-center hover:text-red-400" key={index}>
               <figure className="bg-gray-300 rounded-full w-20 md:w-28 h-20 md:h-28 overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-400 hover:shadow-md hover:shadow-red-200">
                 <img
@@ -49,6 +52,22 @@ function ShopFromTopBrands() {
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
                   loading="lazy"
+                />
+              </figure>
+              <figcaption className="mt-3 text-sm font-medium md:font-semibold text-center transition-colors duration-300 ease-in-out hover:text-red-400">
+                {product.name}
+              </figcaption>
+            </article>
+          ))} */}
+          {doubledPatterns.map((product, index) => (
+            <article className="text-center hover:text-red-400" key={index}>
+              <figure className="bg-gray-300 rounded-lg w-20 md:w-28 h-20 md:h-28 overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-400 hover:shadow-md hover:shadow-red-200">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  loading="lazy"
+                  style={{filter: "brightness(0.9) contrast(1.2) saturate(0)" }}
                 />
               </figure>
               <figcaption className="mt-3 text-sm font-medium md:font-semibold text-center transition-colors duration-300 ease-in-out hover:text-red-400">

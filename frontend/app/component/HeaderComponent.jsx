@@ -396,7 +396,7 @@ function HeaderComponent() {
                 Search for {randomProduct}
               </label>
               <div className="relative w-full">
-                <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
+                <CiSearch className="absolute w-5 h-5 left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
                 {/* Search icon */}
                 <input
                   type="text"

@@ -63,7 +63,7 @@ function SecondHeader() {
 
           {/* Scrolling Products */}
           <div className=" w-full  overflow-x-auto no-scrollbar" >
-            <div className="flex space-x-10 md:space-x-12" ref={brandContainerRef}>
+            <div className="flex space-x-10 md:space-x-12 " ref={brandContainerRef}>
               {firstProductList.map((product, index) => (
                 <article
                   className="text-center flex flex-col w-28 justify-start items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400"
