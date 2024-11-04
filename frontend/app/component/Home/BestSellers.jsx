@@ -2,6 +2,7 @@
 import bestSeller from "@/app/jsFiles/BestSeller";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 function BestSellers() {
   const router = useRouter();
@@ -26,7 +27,7 @@ function BestSellers() {
               className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer  shadow-xl  overflow-hidden rounded-lg "
               onClick={() => handleCardClick(product.name)} // Pass product name to the click handler
             >
-              <div className="rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 p-8">
+              <div className="rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 p-8 bg-white shadow rounded-b-xl">
                 <img
                   src={product.imageUrl} // Use the product image from the array
                   alt={product.name} // Use the product name for the alt attribute
@@ -40,11 +41,12 @@ function BestSellers() {
               </button> */}
               <button
                 type="submit"
-                className="text-white flex justify-center  gap-3 w-full items-center mx-auto  text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-4 overflow-hidden   group"
+                className="text-white flex justify-center font-semibold  md:gap-3 w-full items-center mx-auto text-base  md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-4 overflow-hidden   group"
               >
                 Enquire
+                {/* <IoIosArrowForward className="md:hidden w-5 h-5"/> */}
                 <svg
-                  className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-white ease-linear duration-300 rounded-full border border-white group-hover:border-none p-2 rotate-45"
+                  className="w-8 h-8 hidden md:block justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-white ease-linear duration-300 rounded-full border border-white group-hover:border-none p-2 rotate-45"
                   viewBox="0 0 16 19"
                   xmlns="http://www.w3.org/2000/svg"
                 >

@@ -12,7 +12,7 @@ const BannerSlider = () => {
       <article className="h-full w-full relative">
         <figure className="h-full w-full overflow-hidden">
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
           <video
             src="/Amazing Process of Making Retreaded Tire With Old Tires. Tire Recycling Factory in Korea (online-video-cutter.com)(2).mp4"
             autoPlay

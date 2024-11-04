@@ -88,8 +88,8 @@ function TestimonialPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12 px-4 lg:px-8">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">What Our Clients Say</h1>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12 px-6 lg:px-8">
+      <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-8">What Our Clients Say</h1>
       <div className="w-full  max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {reviews.map((review) => (
           <div

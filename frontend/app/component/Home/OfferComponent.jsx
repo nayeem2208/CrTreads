@@ -77,8 +77,8 @@ function OfferComponent() {
       <div className="w-5/6 md:w-4/6">
         {/* First Row: Four Images */}
         <div className="md:flex py-3">
-          <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mr-3">
-            <div className="h-48 w-full overflow-hidden">
+          <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mr-3 ">
+            <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
                 src={OfferImages[0][randomOne]}
                 alt=""
@@ -88,7 +88,7 @@ function OfferComponent() {
             </div>
           </div>
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mx-3">
-            <div className="h-48 w-full overflow-hidden">
+            <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none ">
               <img
                 src={OfferImages[1][randomTwo]}
                 alt=""
@@ -97,7 +97,7 @@ function OfferComponent() {
             </div>
           </div>
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mx-3">
-            <div className="h-48 w-full overflow-hidden">
+            <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
                 src={OfferImages[2][randomThree]}
                 alt=""
@@ -106,7 +106,7 @@ function OfferComponent() {
             </div>
           </div>
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:ml-3">
-            <div className="h-48 w-full overflow-hidden">
+            <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
                 src={OfferImages[3][randomFour]}
                 alt=""
@@ -117,7 +117,7 @@ function OfferComponent() {
         </div>
 
         {/* Second Row: One Image */}
-        <div className="w-full h-4/6 overflow-hidden mt-4 bg-yellow-400">
+        <div className="w-full h-4/6 overflow-hidden rounded-lg md:rounded-none mt-4 bg-yellow-400">
           {/* <img
             src="https://www.coxmotorparts.co.uk/wp-content/uploads/2022/05/car-tyres.jpg"
             alt=""
