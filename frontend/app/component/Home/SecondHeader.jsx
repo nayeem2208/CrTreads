@@ -33,7 +33,7 @@ function SecondHeader() {
 
   return (
     <section
-      className="pl-2  lg:p-2 flex flex-col justify-center items-center  shadow-md text-gray-800 font-medium md:font-semibold text-center"
+      className="pl-2  lg:p-2 flex flex-col justify-center items-center  shadow-md text-gray-800 font-semibold text-center"
       style={{
         borderBottom: "1px solid rgba(0, 0, 0, 0.2)",
         borderTop: "1px solid rgba(0, 0, 0, 0.2)",
