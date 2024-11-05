@@ -27,7 +27,7 @@ function BestSellers() {
               className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer  shadow-xl  overflow-hidden rounded-lg "
               onClick={() => handleCardClick(product.name)} // Pass product name to the click handler
             >
-              <div className="rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 p-8 bg-white shadow rounded-b-xl">
+              <div style={{borderColor:"rgb(143, 143, 143,0.3)"}} className="border rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 p-8 bg-white shadow rounded-b-xl">
                 <img
                   src={product.imageUrl} // Use the product image from the array
                   alt={product.name} // Use the product name for the alt attribute

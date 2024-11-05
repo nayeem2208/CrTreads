@@ -137,7 +137,11 @@ function HeaderComponent() {
   };
 
   return (
-    <header className="flex justify-center bg-white  py-4 ">
+    <header
+      className={`flex justify-center bg-white  py-4   sm:pb-1 ${
+        isModalOpen ? "pb-10 sm:pb-1" : ""
+      }`}
+    >
       <div className="flex flex-col w-full md:w-full lg:w-full xl:w-11/12 2xl:w-4/6 px-4 md:px-3">
         {/* Row 1: Toggle Button & Logo */}
         <div className="flex justify-between items-center w-full lg:flex-row">
@@ -395,14 +399,14 @@ function HeaderComponent() {
               <label htmlFor="search-input" className="sr-only">
                 Search for {randomProduct}
               </label>
-              <div className="relative w-full">
-                <CiSearch className="absolute w-5 h-5 left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
+              <div className="relative w-full h-12 ">
+                <CiSearch className="absolute w-6 h-6 left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
                 {/* Search icon */}
                 <input
                   type="text"
                   id="search-input"
                   placeholder={`Search for "${randomProduct}"`}
-                  className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
+                  className="pl-10 pr-2 w-full py-2 h-12 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
                   aria-label="Search input"
                   onFocus={handleFocus}
                 />
@@ -428,15 +432,15 @@ function HeaderComponent() {
                   <label htmlFor="search-input" className="sr-only">
                     Search for products, brands, and more
                   </label>
-                  <div className="relative w-full">
-                    <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
+                  <div className="relative w-full h-12 ">
+                    <CiSearch className="absolute left-3 w-6 h-6 top-1/2 transform -translate-y-1/2 text-gray-500" />{" "}
                     {/* Search icon */}
                     <input
                       type="text"
                       id="search-input"
                       // placeholder={`Search for ${randomProduct}`}
                       ref={inputRefMobile}
-                      className="pl-10 pr-2 w-full py-2 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
+                      className="pl-10 pr-2 w-full py-2 h-12 rounded-md focus:outline-none bg-neutral-100 focus:border-red-400"
                       aria-label="Search input"
                       onFocus={handleFocus}
                       value={searchContent}
