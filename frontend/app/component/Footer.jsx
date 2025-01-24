@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoApple, IoLogoGooglePlaystore } from "react-icons/io5";
+import { TbBrandYoutubeFilled } from "react-icons/tb";
 
 function Footer() {
   return (
@@ -43,35 +44,35 @@ function Footer() {
             </ul>
           </div>
           <div className="w-full md:w-3/12">
-            <h3 className="text-gray-600 md:font-semibold md:text-2xl">Contact Us</h3>
-            <ul className="mt-4 text-gray-600 md:font-semibold">
+            <h3 className="mt-4 text-gray-600 md:font-semibold md:text-2xl">Contact Us</h3>
+            <ul className="mb-4 text-gray-600 md:font-semibold">
               <li className="md:text-lg">Call Us at +91999999999</li>
               <li className="md:text-lg">crtreadstyre.com</li>
             </ul>
-            <div className="flex mt-4 space-x-4 text-gray-600 ">
+            <div className="flex mt-4 justify-center md:justify-normal space-x-4 text-gray-600 ">
               <a href="https://www.facebook.com" aria-label="Facebook">
-                <FaFacebook className="w-6 h-6" />
+                <FaFacebook className="w-7 h-7" />
               </a>
               <a href="https://www.instagram.com" aria-label="Instagram">
-                <RiInstagramFill className="w-6 h-6" />
+                <RiInstagramFill className="w-7 h-7" />
               </a>
               <a href="https://www.youtube.com" aria-label="YouTube">
-                <FaYoutube className="w-6 h-6" />
+                <TbBrandYoutubeFilled className="w-7 h-7" />
               </a>
               <a href="https://www.linkedin.com" aria-label="LinkedIn">
-                <FaLinkedin className="w-6 h-6" />
+                <FaLinkedin className="w-7 h-7" />
               </a>
               <a
                 href="https://www.apple.com/app-store/"
                 aria-label="Apple Store"
               >
-                <IoLogoApple className="w-6 h-6" />
+                <IoLogoApple className="w-7 h-8" />
               </a>
               <a
                 href="https://play.google.com/store"
                 aria-label="Google Play Store"
               >
-                <IoLogoGooglePlaystore className="w-6 h-6" />
+                <IoLogoGooglePlaystore className="w-7 h-7" />
               </a>
             </div>
           </div>

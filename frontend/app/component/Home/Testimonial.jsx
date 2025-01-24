@@ -43,7 +43,7 @@ function Testimonial() {
 
   return (
     <div
-      className="p-4 mt-8 flex justify-center items-center testimonial"
+      className="p-4  flex justify-center items-center testimonial"
       style={{ height: "auto", minHeight: "50vh" }}
       aria-labelledby="testimonial-title"
     >
@@ -51,10 +51,10 @@ function Testimonial() {
         <h2 id="testimonial-title" className="sr-only">
           Customer Testimonials
         </h2>
-        <p className="text-xl md:text-3xl font-semibold my-12 text-center">
+        <p className="text-xl text-red-600 md:text-3xl font-semibold my-12 text-center">
           Our customers love us!
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
         <div className="w-full  max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <div

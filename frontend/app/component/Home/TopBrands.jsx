@@ -35,11 +35,11 @@ function ShopFromTopBrands() {
   return (
     <section
       aria-label="Shop from Top Brands"
-      className="lg:p-4 flex flex-col justify-center bg-stone-100 h-64 md:h-96 text-left items-center shadow-inner"
+      className="lg:py-12 flex flex-col  bg-stone-100  text-left items-center shadow-inner py-8"
     >
       {/* Section heading */}
-      <div className="  lg:w-9/12 w-11/12 mb-4">
-      <h2 className="text-xl md:text-2xl font-semibold mb-6 text-black ">TOP PATTERNS</h2>
+      <div className="  lg:w-9/12 w-11/12 ">
+      <h2 style={{color:'#ff1414'}} className="text-xl md:text-2xl font-semibold mb-8 lg:mb-12  ">TOP PATTERNS</h2>
       </div>
       {/* Scrolling brand logos */}
       <div className="overflow-hidden no-scrollbar lg:w-9/12 w-11/12 text-gray-800">

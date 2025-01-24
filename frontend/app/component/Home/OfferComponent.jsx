@@ -74,7 +74,7 @@ function OfferComponent() {
   }, []);
   return (
     <div className="flex justify-center bg-stone-50 shadow-inner items-center h-full pt-12  lg:pt-20">
-      <div className="w-5/6 md:w-4/6">
+      <div className="w-5/6 md:w-5/6">
         {/* First Row: Four Images */}
         <div className="md:flex py-3">
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mr-3 ">
@@ -117,7 +117,7 @@ function OfferComponent() {
         </div>
 
         {/* Second Row: One Image */}
-        <div className="w-full h-4/6 overflow-hidden rounded-lg md:rounded-none mt-4 bg-yellow-400">
+        <div className="w-full h-96 md:h-4/6 overflow-hidden rounded-lg md:rounded-none mt-4 bg-yellow-400">
           {/* <img
             src="https://www.coxmotorparts.co.uk/wp-content/uploads/2022/05/car-tyres.jpg"
             alt=""

@@ -36,8 +36,8 @@ function FlagComponent() {
   const doubledFlags = [...flags, ...flags];
 
   return (
-    <div className="bg-gray-200 py-10 my-12">
-      <p className="text-xl md:text-2xl font-semibold text-center  text-gray-800 ml-2 md:ml-8 mb-8">
+    <div className="bg-stone-100 py-10 my-12">
+      <p style={{color:'#ff1414'}} className="text-xl md:text-2xl font-semibold text-center   ml-2 md:ml-8 mb-8">
         Our Global Presence
       </p>
       <div className="flex w-full overflow-hidden">

@@ -13,38 +13,31 @@ function BestSellers() {
 
   return (
     <div
-      className="py-16 flex justify-center items-center "
+      className="py-12 flex justify-center items-center "
       // style={{ height: "50vh" }}
     >
       <div className="w-11/12 lg:w-9/12">
-        <p className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">BEST SELLER</p>
+        <p className="text-xl md:text-2xl font-semibold text-red-600   mb-12">BEST SELLER</p>
         {/* Enable horizontal scrolling */}
-        <div className="flex overflow-x-auto space-x-6 md:space-x-10 py-8 ">
+        <div className="flex overflow-x-auto space-x-6 md:space-x-10  ">
           {/* Map over bestSeller array */}
           {bestSeller.map((product, index) => (
             <div
               key={index}
-              className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col cursor-pointer  shadow-xl  overflow-hidden rounded-lg "
+              className="w-48 md:w-64 h-72 md:h-80 flex-none flex flex-col justify-center items-center cursor-pointer  shadow-xl  overflow-hidden rounded-lg "
               onClick={() => handleCardClick(product.name)} // Pass product name to the click handler
             >
-              <div style={{borderColor:"rgb(143, 143, 143,0.3)"}} className="border rounded-t-lg overflow-hidden flex-grow transition-transform duration-300 transform hover:scale-105 p-8 bg-white shadow rounded-b-xl">
                 <img
                   src={product.imageUrl} // Use the product image from the array
                   alt={product.name} // Use the product name for the alt attribute
-                  className="w-full h-full object-cover"
+                  className="w-4/5 "
                 />
-              </div>
               <p className="my-4 text-center">{product.name}</p>{" "}
-              {/* Use the product name */}
-              {/* <button className="bg-black text-white w-full font-semibold text-lg rounded-b-lg h-12 transition-colors duration-300  hover:shadow-lg">
-                ENQUIRE
-              </button> */}
               <button
                 type="submit"
-                className="text-white flex justify-center font-semibold  md:gap-3 w-full items-center mx-auto text-base  md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-4 overflow-hidden   group"
+                className="text-white flex justify-center font-semibold  md:gap-3 w-full items-center mx-auto text-base  md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto  before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0  before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-3 overflow-hidden   group"
               >
                 Enquire
-                {/* <IoIosArrowForward className="md:hidden w-5 h-5"/> */}
                 <svg
                   className="w-8 h-8 hidden md:block justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-white ease-linear duration-300 rounded-full border border-white group-hover:border-none p-2 rotate-45"
                   viewBox="0 0 16 19"
