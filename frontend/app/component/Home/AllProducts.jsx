@@ -21,7 +21,7 @@ function AllProductsHome() {
                 query: { data: JSON.stringify(product.name) },
               }}
             >
-              <div className="w-full bg-white h-56 md:h-80 flex-none mt-6 flex flex-col justify-between cursor-pointer shadow-xl overflow-hidden rounded-lg max-w-xs mx-auto">
+              <div className="w-full bg-white h-64 md:h-80 flex-none mt-6 flex flex-col justify-between cursor-pointer shadow-xl overflow-hidden rounded-lg max-w-xs mx-auto">
                 {" "}
                 {/* <div style={{borderColor:"rgb(143, 143, 143,0.3)"}} className="w-full h-40 md:h-48 shadow border  bg-white rounded-b-lg flex items-center justify-center rounded-t-lg overflow-hidden ">
                   {" "} */}
@@ -31,12 +31,12 @@ function AllProductsHome() {
                     className="h-3/5 object-cover"
                   />
                 {/* </div> */}
-                <p className=" my-3 md:my-6 text-center text-sm md:text-base mx-2">
+                <p className="  text-center text-sm md:text-base mx-2">
                   {product.name}
                 </p>
                 <button
                   type="submit"
-                  className="text-white h-10 md:h-14 font-semibold  flex justify-center md:gap-3 w-full items-center mx-auto  text-sm md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 md:py-2 overflow-hidden group"
+                  className="text-white  h-10 md:h-14 font-semibold  flex justify-center md:gap-3 w-full items-center mx-auto  text-sm md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 md:py-2 overflow-hidden group"
                 >
                   Enquire
                   {/* <IoIosArrowForward className="md:hidden w-5 h-5" /> */}
