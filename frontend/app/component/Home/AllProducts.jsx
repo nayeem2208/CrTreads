@@ -36,7 +36,7 @@ function AllProductsHome() {
                 </p>
                 <button
                   type="submit"
-                  className="text-white  py-4 font-semibold  flex justify-center md:gap-3 w-full items-center mx-auto  text-sm md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 md:py-2 overflow-hidden group"
+                  className="text-white h-10 md:h-14 font-semibold  flex justify-center md:gap-3 w-full items-center mx-auto  text-sm md:text-lg bg-black backdrop-blur-md lg:font-semibold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:bg-gray-600 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 md:py-2 overflow-hidden group"
                 >
                   Enquire
                   {/* <IoIosArrowForward className="md:hidden w-5 h-5" /> */}
