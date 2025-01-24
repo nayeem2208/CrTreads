@@ -21,7 +21,7 @@ function AllProductsHome() {
                 query: { data: JSON.stringify(product.name) },
               }}
             >
-              <div className="w-full bg-white h-52 md:h-80 flex-none mt-6 flex flex-col justify-between cursor-pointer shadow-xl overflow-hidden rounded-lg max-w-xs mx-auto">
+              <div className="w-full bg-white h-56 md:h-80 flex-none mt-6 flex flex-col justify-between cursor-pointer shadow-xl overflow-hidden rounded-lg max-w-xs mx-auto">
                 {" "}
                 {/* <div style={{borderColor:"rgb(143, 143, 143,0.3)"}} className="w-full h-40 md:h-48 shadow border  bg-white rounded-b-lg flex items-center justify-center rounded-t-lg overflow-hidden ">
                   {" "} */}
