@@ -28,7 +28,7 @@ function AllProductsHome() {
                   <img
                     src={product.imageUrl}
                     alt={product.name}
-                    className="h-4/5 md:h-3/5"
+                    className="h-3/5 object-cover"
                   />
                 {/* </div> */}
                 <p className=" my-3 md:my-6 text-center text-sm md:text-base mx-2">

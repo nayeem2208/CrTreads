@@ -42,7 +42,7 @@ function ShopFromTopBrands() {
       <h2  className="text-red-600 text-xl md:text-2xl font-semibold mb-8 lg:mb-12  ">TOP PATTERNS</h2>
       </div>
       {/* Scrolling brand logos */}
-      <div className="overflow-hidden no-scrollbar lg:w-9/12 w-11/12 text-gray-800">
+      <div className="overflow-x-auto no-scrollbar lg:w-9/12 w-11/12 text-gray-800">
         <div className="flex space-x-12 lg:space-x-7 " ref={brandContainerRef}>
           {/* {tyreBrands.concat(tyreBrands).map((product, index) => (
             <article className="text-center hover:text-red-400" key={index}>
@@ -61,7 +61,7 @@ function ShopFromTopBrands() {
           ))} */}
           {doubledPatterns.map((product, index) => (
             <article className="text-center hover:text-red-400" key={index}>
-              <figure className="bg-gray-300 rounded-lg w-20 md:w-28 h-20 md:h-28 overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-400 hover:shadow-md hover:shadow-red-200">
+              <figure className="bg-gray-300 rounded-lg w-20 md:w-28 h-20 md:h-28 overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-400  ">
                 <img
                   src={product.imageUrl}
                   alt={product.name}
