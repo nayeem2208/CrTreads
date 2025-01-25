@@ -1,12 +1,13 @@
 "use client";
 import bestSeller from "@/app/jsFiles/BestSeller";
 import { useParams } from "next/navigation";
+import { useRouter } from "next/router";
 import React from "react";
 import { MdKeyboardBackspace } from "react-icons/md";
 
 const BestSellerProductView = () => {
   const { name } = useParams(); // Get the product name from the URL
-
+  const router = useRouter(); 
   // Decode the URL parameters
   const decodedName = decodeURIComponent(name);
 
