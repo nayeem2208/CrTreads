@@ -1,7 +1,6 @@
 "use client";
 import bestSeller from "@/app/jsFiles/BestSeller";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation";
 import React from "react";
 import { MdKeyboardBackspace } from "react-icons/md";
 
