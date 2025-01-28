@@ -39,7 +39,7 @@ function ShopFromTopBrands() {
     >
       {/* Section heading */}
       <div className="  lg:w-9/12 w-11/12 ">
-      <h2  className="text-red-600 text-xl md:text-2xl font-semibold mb-8 lg:mb-12  ">TOP PATTERNS</h2>
+      <h2  className="text-gray-800 text-xl md:text-2xl font-semibold mb-8 lg:mb-12  ">TOP PATTERNS</h2>
       </div>
       {/* Scrolling brand logos */}
       <div className="overflow-x-auto no-scrollbar lg:w-9/12 w-11/12 text-gray-800">

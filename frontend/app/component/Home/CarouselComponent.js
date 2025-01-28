@@ -7,14 +7,14 @@ const BannerSlider = () => {
   return (
     <section
       aria-label="Banner" // Optional: Set a max height for the section
-      className="relative   shadow-md w-full h-[400px] md:h-[700px]"
+      className="relative   shadow-md w-full h-[480px] md:h-[800px]"
     >
       <article className="h-full w-full relative">
         <figure className="h-full w-full overflow-hidden">
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
           <video
-            src="/Amazing Process of Making Retreaded Tire With Old Tires. Tire Recycling Factory in Korea (online-video-cutter.com)(2).mp4"
+            src="/CRC Corporate Reel Size.mp4"
             autoPlay
             loop
             muted

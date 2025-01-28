@@ -7,7 +7,7 @@ import { TbBrandYoutubeFilled } from "react-icons/tb";
 function Footer() {
   return (
     <footer
-      className="p-4 pt-14 mt-14 flex justify-center items-center"
+      className="p-4 pt-14  flex justify-center items-center"
       style={{
         borderTop: "1px solid rgba(0, 0, 0, 0.2)",
       }}
@@ -43,13 +43,13 @@ function Footer() {
               <li className="my-4">Shop For</li>
             </ul>
           </div>
-          <div className="w-full md:w-3/12">
+          <div className="w-full md:w-3/12 ">
             <h3 className="mt-4 text-gray-600 md:font-semibold md:text-2xl">Contact Us</h3>
             <ul className="mb-4 text-gray-600 md:font-semibold">
               <li className="md:text-lg">Call Us at +91999999999</li>
               <li className="md:text-lg">crtreadstyre.com</li>
             </ul>
-            <div className="flex mt-4 justify-center md:justify-normal space-x-4 text-gray-600 ">
+            <div className="flex  justify-center md:justify-normal space-x-4 text-gray-600 mt-12">
               <a href="https://www.facebook.com" aria-label="Facebook">
                 <FaFacebook className="w-7 h-7" />
               </a>
@@ -77,7 +77,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-center my-16 text-gray-600">
+        <p className="text-center mb-16 text-gray-600">
           © 2024 CR Treads Tyres
         </p>
       </div>

@@ -39,9 +39,10 @@ function SecondHeader() {
         borderTop: "1px solid rgba(0, 0, 0, 0.2)",
       }}
     >
-      <div className="w-full lg:w-5/6 xl:w-8/12 pt-4 md:py-2">
+      {/* <div className="w-full lg:w-5/6 xl:w-8/12 pt-4 md:py-2"> */}
+      <div className="w-full  pt-4 md:py-2">
         <div className="flex w-full relative  md:py-4   overflow-x-auto no-scrollbar ">
-          <article className="text-center md:w-1/6 mr-4 md:mr-0  flex flex-col flex-shrink-0 justify-start items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400">
+          <article className="text-center md:w-1/12 mr-4 md:mr-4  flex flex-col flex-shrink-0 justify-start items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:text-red-400">
             <figure className=" rounded-full w-20 md:w-28 h-20 md:h-28 flex items-center justify-center transition-transform duration-300 ease-in-out transform p-2">
               <div className="rounded-full">
                 <img

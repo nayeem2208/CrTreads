@@ -17,7 +17,7 @@ function BestSellers() {
       // style={{ height: "50vh" }}
     >
       <div className="w-11/12 lg:w-9/12">
-        <p className="text-xl md:text-2xl font-semibold text-red-600   mb-12">BEST SELLER</p>
+        <p className="text-xl md:text-2xl font-semibold text-gray-800   mb-12">BEST SELLER</p>
         {/* Enable horizontal scrolling */}
         <div className="flex overflow-x-auto space-x-6 md:space-x-10  ">
           {/* Map over bestSeller array */}

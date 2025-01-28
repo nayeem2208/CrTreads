@@ -51,7 +51,7 @@ function Testimonial() {
         <h2 id="testimonial-title" className="sr-only">
           Customer Testimonials
         </h2>
-        <p className="text-xl text-red-600 md:text-3xl font-semibold my-12 text-center">
+        <p className="text-xl text-gray-800 md:text-3xl font-semibold my-12 text-center">
           Our customers love us!
         </p>
         <div className="flex justify-center ">
