@@ -1,28 +1,33 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const BannerSlider = () => {
+  useEffect(() => {
+    // Dynamically load the Vimeo player script
+    const script = document.createElement('script');
+    script.src = "https://player.vimeo.com/api/player.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up the script when the component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section
       aria-label="Banner"
-      className="relative shadow-md w-full " // Use h-screen for full-screen height
+      className="relative shadow-md w-full"
     >
-      <article className="h-full w-full ">
+      <article className="h-full w-full">
         <figure className="h-full w-full overflow-hidden">
           {/* Overlay */}
-          <div className=" inset-0 bg-black bg-opacity-10 z-10"></div>
+          <div className="inset-0 bg-black bg-opacity-10 z-10"></div>
 
           {/* Vimeo Embed */}
-          {/* <div className=" w-full p-0 md:hidden bg-black h-[500px]">
-            <iframe
-              src="https://player.vimeo.com/video/1051170649?autoplay=1&loop=1&muted=1&controls=0"
-              allow="autoplay; clipboard-write; encrypted-media"
-              className='w-full h-full object-cover'
-              title="CRC Corporate Reel"
-            ></iframe>
-          </div> */}
-          <div className='h-[500px] overflow-hidden md:hidden'>
-            <div style={{ padding: '180.27% 0 0 0', position: 'relative' }} className=''>
+          <div className="h-[500px] overflow-hidden md:hidden">
+            <div style={{ padding: '180.27% 0 0 0', position: 'relative' }}>
               <iframe
                 src="https://player.vimeo.com/video/1051170649?autoplay=1&loop=1&muted=1&controls=0"
                 frameBorder="0"
@@ -33,8 +38,8 @@ const BannerSlider = () => {
             </div>
           </div>
 
-          <div className='h-[600px] lg:h-[1000px]   overflow-hidden hidden md:block'>
-            <div style={{ padding: '86.27% 0 0 0', position: 'relative' }} className=''>
+          <div className="h-[600px] lg:h-[1000px] overflow-hidden hidden md:block">
+            <div style={{ padding: '86.27% 0 0 0', position: 'relative' }}>
               <iframe
                 src="https://player.vimeo.com/video/1051568333?h=b7dea7afc6&autoplay=1&loop=1&muted=1&controls=0&portrait=0"
                 frameBorder="0"
@@ -44,15 +49,6 @@ const BannerSlider = () => {
               ></iframe>
             </div>
           </div>
-          {/* <div className=" w-full p-0 hidden md:block bg-black h-[1300px]">
-            <iframe
-              src="https://player.vimeo.com/video/1051568333?h=b7dea7afc6&autoplay=1&loop=1&muted=1&controls=0"
-              allow="autoplay; clipboard-write; encrypted-media"
-              className='w-full h-full object-cover'
-              title="CRC Corporate Reel"
-            ></iframe>
-          </div> */}
-          <script src="https://player.vimeo.com/api/player.js"></script>
         </figure>
       </article>
     </section>
