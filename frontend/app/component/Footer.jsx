@@ -35,14 +35,14 @@ function Footer() {
               value to every customer.{" "}
             </p>
           </div>
-          <div className="w-full md:w-3/12 mb-8 md:mb-0">
+          {/* <div className="w-full md:w-3/12 mb-8 md:mb-0">
             <h3 className="text-gray-600 md:font-semibold text-2xl">LINKS</h3>
             <ul className="mt-4 text-gray-600 md:font-semibold">
               <li className="my-4">Shop For </li>
               <li className="my-4">Shop For </li>
               <li className="my-4">Shop For</li>
             </ul>
-          </div>
+          </div> */}
           <div className="w-full md:w-3/12 ">
             <h3 className="mt-4 text-gray-600 md:font-semibold md:text-2xl">Contact Us</h3>
             <ul className="mb-4 text-gray-600 md:font-semibold">
@@ -62,7 +62,7 @@ function Footer() {
               <a href="https://www.linkedin.com" aria-label="LinkedIn">
                 <FaLinkedin className="w-7 h-7" />
               </a>
-              <a
+              {/* <a
                 href="https://www.apple.com/app-store/"
                 aria-label="Apple Store"
               >
@@ -73,7 +73,7 @@ function Footer() {
                 aria-label="Google Play Store"
               >
                 <IoLogoGooglePlaystore className="w-7 h-7" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

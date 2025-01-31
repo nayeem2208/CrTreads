@@ -3,75 +3,85 @@ import OfferImages from "@/app/jsFiles/OfferImages";
 import React, { useEffect, useState } from "react";
 
 function OfferComponent() {
-  const [randomOne, setRandomNumberOne] = useState(0);
-  const [randomTwo, setRandomNumberTwo] = useState(0);
-  const [randomThree, setRandomNumberThree] = useState(0);
-  const [randomFour, setRandomNumberFour] = useState(0);
-  const [opacityOne,setOpacityOne]=useState(1)
-  const [opacityTwo,setOpacityTwo]=useState(1)
-  const [opacityThree,setOpacityThree]=useState(1)
-  const [opacityFour,setOpacityFour]=useState(1)
+  // const [randomOne, setRandomNumberOne] = useState(0);
+  // const [randomTwo, setRandomNumberTwo] = useState(0);
+  // const [randomThree, setRandomNumberThree] = useState(0);
+  // const [randomFour, setRandomNumberFour] = useState(0);
+  // const [opacityOne,setOpacityOne]=useState(1)
+  // const [opacityTwo,setOpacityTwo]=useState(1)
+  // const [opacityThree,setOpacityThree]=useState(1)
+  // const [opacityFour,setOpacityFour]=useState(1)
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setOpacityOne(0)
-      const random = Math.floor(Math.random() * 4);
-      setRandomNumberOne(random);
-      setOpacityOne(1)
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setOpacityOne(0)
+  //     const random = Math.floor(Math.random() * 4);
+  //     setRandomNumberOne(random);
+  //     setOpacityOne(1)
+  //   }, 3000);
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const random = Math.floor(Math.random() * 4);
-      setRandomNumberTwo(random);
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const random = Math.floor(Math.random() * 4);
+  //     setRandomNumberTwo(random);
+  //   }, 3000);
 
-    const initialDelay = setTimeout(() => {
-      setRandomNumberTwo(Math.floor(Math.random() * 4));
-    }, 200);
+  //   const initialDelay = setTimeout(() => {
+  //     setRandomNumberTwo(Math.floor(Math.random() * 4));
+  //   }, 200);
 
-    return () => {
-      clearInterval(intervalId);
-      clearTimeout(initialDelay);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //     clearTimeout(initialDelay);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const random = Math.floor(Math.random() * 4);
-      setRandomNumberThree(random);
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const random = Math.floor(Math.random() * 4);
+  //     setRandomNumberThree(random);
+  //   }, 3000);
 
-    const initialDelay = setTimeout(() => {
-      setRandomNumberThree(Math.floor(Math.random() * 4));
-    }, 500);
+  //   const initialDelay = setTimeout(() => {
+  //     setRandomNumberThree(Math.floor(Math.random() * 4));
+  //   }, 500);
 
-    return () => {
-      clearInterval(intervalId);
-      clearTimeout(initialDelay);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //     clearTimeout(initialDelay);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const random = Math.floor(Math.random() * 4);
-      setRandomNumberFour(random);
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const random = Math.floor(Math.random() * 4);
+  //     setRandomNumberFour(random);
+  //   }, 3000);
 
-    const initialDelay = setTimeout(() => {
-      setRandomNumberFour(Math.floor(Math.random() * 4));
-    }, 1000);
+  //   const initialDelay = setTimeout(() => {
+  //     setRandomNumberFour(Math.floor(Math.random() * 4));
+  //   }, 1000);
 
-    return () => {
-      clearInterval(intervalId);
-      clearTimeout(initialDelay);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //     clearTimeout(initialDelay);
+  //   };
+  // }, []);
+//   "/CRC5.png",
+//     '/CRC3.jpg',
+//     '/CRC1.jpg',
+//     '/CRC2.jpg'
+// ]
+//     , [
+//     "/CRC4.png",
+//     '/CRC3.jpg',
+//     '/CRC6.png',
+//     '/CRC7.png']
   return (
     <div className="flex justify-center bg-stone-50 shadow-inner items-center h-full pt-12  lg:pt-20">
       <div className="w-5/6 md:w-5/6">
@@ -80,17 +90,17 @@ function OfferComponent() {
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mr-3 ">
             <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
-                src={OfferImages[0][randomOne]}
+                src='/CRC7.png'
                 alt=""
                 className="h-full w-full object-cover"
-                style={{opacity:opacityOne}}
+                // style={{opacity:opacityOne}}
               />
             </div>
           </div>
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mx-3">
             <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none ">
               <img
-                src={OfferImages[1][randomTwo]}
+                src='/CRC2.jpg'
                 alt=""
                 className="h-full w-full object-cover"
               />
@@ -99,7 +109,7 @@ function OfferComponent() {
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:mx-3">
             <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
-                src={OfferImages[2][randomThree]}
+                src='/CRC6.png'
                 alt=""
                 className="h-full w-full object-cover"
               />
@@ -108,7 +118,7 @@ function OfferComponent() {
           <div className="w-full lg:w-1/4 mt-4 lg:mt-0 lg:ml-3">
             <div className="h-48 w-full overflow-hidden rounded-lg md:rounded-none">
               <img
-                src={OfferImages[3][randomFour]}
+                src='/CRC5.png'
                 alt=""
                 className="h-full w-full object-cover"
               />

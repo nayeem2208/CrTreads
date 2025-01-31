@@ -35,6 +35,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* <script
+          type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        ></script> */}
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-mukta`}>
         <HeaderComponent />

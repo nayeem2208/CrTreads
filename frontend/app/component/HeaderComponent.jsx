@@ -16,6 +16,7 @@ import AllProductsCategory from "../jsFiles/allProducts";
 import ProductsDisplay from "./Home/ProductInSearch";
 import ProductBaseonSearch from "./Home/ProductBaseonSearch";
 import { useSearchContext } from "../context/Context";
+import { TfiWorld } from "react-icons/tfi";
 
 function HeaderComponent() {
   const { searchQuery, setSearchQuery, searchOpen, setSearchOpen } =
@@ -54,6 +55,71 @@ function HeaderComponent() {
     }
   };
 
+  // var duplicate_google_translate_counter = 0;
+  // const googleTranslateElementInit = () => {
+  //   window.googleTranslateElementInit = () => {
+  //     new window.google.translate.TranslateElement(
+  //       {
+  //         pageLanguage: "en",
+  //         // layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+  //       },
+  //       "google_translate_element"
+  //     );
+  //   };
+  // };
+
+  // useEffect(() => {
+  //   if (!window.googleTranslateElementInit) {
+  //     window.googleTranslateElementInit = googleTranslateElementInit;
+  //     const addScript = document.createElement("script");
+  //     addScript.src =
+  //       "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  //     document.body.appendChild(addScript);
+  //   }
+  // }, []);
+  useEffect(() => {
+    console.log(window.googleTranslateElementInit, "window translate");
+    if (!window.googleTranslateElementInit) {
+      const addScript = document.createElement("script");
+      addScript.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(addScript);
+
+      // Function to initialize Google Translate
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            autoDisplay: false,
+          },
+          "google_translate_element2"
+        );
+      };
+
+      return () => {
+        // Cleanup the script on unmount
+        document.body.removeChild(addScript);
+      };
+    }
+  }, []);
+
+  // const openTranslateDropdown = () => {
+  //   const translateButton = document.querySelector(".goog-te-gadget");
+  //   if (translateButton) {
+  //     // Trigger the dropdown to open
+  //     translateButton.click();
+  //   } else {
+  //     alert("Error: Could not find Google Translate button.");
+  //   }
+  // };
   useEffect(() => {
     if (isModalOpen) {
       window.addEventListener("keydown", handleKeyDown);
@@ -142,9 +208,9 @@ function HeaderComponent() {
         isModalOpen ? "pb-10 sm:pb-1" : ""
       }`}
     >
-      <div className="flex flex-col w-full md:w-full lg:w-full xl:w-11/12 2xl:w-4/6 px-4 md:px-3">
+      <div className="flex flex-col w-full md:w-full lg:w-full xl:w-11/12 2xl:w-5/6 px-4 md:px-3">
         {/* Row 1: Toggle Button & Logo */}
-        <div className="flex justify-between items-center w-full lg:flex-row">
+        <div className="flex justify-between items-center w-full lg:flex-row ">
           <div className="flex items-center justify-between w-8/12 sm:w-7/12 lg:w-1/6 ">
             {/* Hamburger Icon for small screens */}
             <div className="lg:hidden w-2/6">
@@ -162,7 +228,7 @@ function HeaderComponent() {
               className="h-16 lg:h-20"
             />
           </div>
-          <div className="hidden lg:block w-2/6 mt-4 lg:mt-0 lg:items-center bg-gray-100">
+          <div className="hidden lg:block w-2/6 mt-4 lg:mt-0 lg:items-center bg-gray-100 ">
             {!isModalOpen && (
               <form
                 className="flex w-full z-50 "
@@ -203,7 +269,7 @@ function HeaderComponent() {
                   className="fixed inset-0 bg-black opacity-50 z-40"
                   onClick={() => setIsModalOpen(false)}
                 ></div>
-                <div className=" absolute top-[33px] w-[390px] lg:w-[440px]  2xl:w-[415px]  rounded-lg shadow-lg z-50 ">
+                <div className=" absolute top-[33px] w-[390px] lg:w-[440px]   2xl:w-[510px]  rounded-lg shadow-lg z-50 ">
                   <form
                     className="flex w-full z-50 "
                     role="search"
@@ -257,13 +323,12 @@ function HeaderComponent() {
               </>
             )}
           </div>
-
           <nav
             className={`${
               isOpen ? "block" : "hidden"
-            } lg:flex lg:w-2/5 mt-4 lg:mt-0 lg:items-center`}
+            } lg:flex lg:w-2/5 mt-4 lg:mt-0 lg:items-center  justify-end`}
           >
-            <ul className="flex flex-col lg:flex-row justify-center items-center font-medium space-y-4 lg:space-y-0 lg:space-x-10">
+            <ul className="flex flex-col lg:flex-row justify-center items-center font-medium space-y-4 lg:space-y-0 lg:space-x-4 xl:space-x-7 2xl:space-x-10">
               {/* Home */}
               <li className="text-center lg:text-left">
                 <Link
@@ -311,7 +376,14 @@ function HeaderComponent() {
                   Contact us
                 </Link>
               </li>
+            <div className="h-10 overflow-hidden  pt-1"><div id="google_translate_element" className=""></div></div>
             </ul>
+            {/* <div className="h-10 overflow-hidden">
+              <div className="ml-4" onClick={openTranslateDropdown}>
+                <TfiWorld />
+                <div id="google_translate_element"></div>
+              </div>
+            </div> */}
           </nav>
 
           {/* Fullscreen Menu for Mobile Screens */}
@@ -367,6 +439,7 @@ function HeaderComponent() {
                     Contact us
                   </Link>
                 </li>
+                <div className="h-10 overflow-hidden  pt-1 "><div id="google_translate_element2" className=""></div></div>
               </ul>
 
               {/* Social Media Icons */}

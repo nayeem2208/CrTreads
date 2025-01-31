@@ -12,6 +12,7 @@ import Testimonial from './component/Home/Testimonial';
 import AllProductsHome from './component/Home/AllProducts';
 import FlagComponent from './component/Home/FlagComponent';
 import MisscalComponent from './component/Home/MisscalComponent';
+import BrochureDownload from './component/Home/Brochure';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <AllProductsHome/>
       <OfferComponent/>
       <Testimonial/>
+      <BrochureDownload/>
       <FlagComponent/>
       <MisscalComponent/>
     </div>
